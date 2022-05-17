@@ -41,7 +41,15 @@ class ComicsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $data->title = $data['title'];
+        $data->description = $data['description'];
+        $data->thumb = $data['thumb'];
+        $data->price = $data['price'];
+        $data->series = $data['series'];
+        $data->sale_date = $data['sale_date'];
+        $data->type = $data['type'];
+
     }
 
     /**
