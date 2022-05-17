@@ -3,4 +3,6 @@
 ul{
     list-style: none;
 }
-
+div.card{
+    width: calc(100% / 4 - 1rem);
+}

@@ -11246,3 +11246,7 @@ textarea.form-control-lg {
 ul {
   list-style: none;
 }
+
+div.card {
+  width: calc(25% - 1rem);
+}

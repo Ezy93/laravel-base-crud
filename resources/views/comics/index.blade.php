@@ -5,10 +5,9 @@
 @section('main-content')
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12">
-
+            <div class="col-12 d-flex flex-wrap">
                 @foreach ($comics as $comic)
-                    <div class="card w-25" >
+                    <div class="card m-2" >
                         <img src="{{$comic->thumb}}" class="card-img-top" alt="{{'image of'.' '.$comic->title}}">
                         <div class="card-body">
                             <h5 class="card-title"><span class="fw-bold">Title:</span>{{' '.$comic->title}}</h5>
