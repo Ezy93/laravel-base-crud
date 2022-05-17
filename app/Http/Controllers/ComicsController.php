@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Comic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ComicsController extends Controller
 {
@@ -13,8 +15,15 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+        $comics = DB::table('comics')
+        ->all();
+        $data=[
+            "comic"=> new Comic(),
+            "comics"=> $comics,
+        ];
+        return view('comics.index',$data);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -45,7 +54,8 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        return view('comics.show',['comic'=>$comimc]);
     }
 
     /**
