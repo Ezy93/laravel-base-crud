@@ -15,10 +15,8 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = DB::table('comics')
-        ->all();
+        $comics = Comic::all();
         $data=[
-            "comic"=> new Comic(),
             "comics"=> $comics,
         ];
         return view('comics.index',$data);
