@@ -51,6 +51,7 @@ class ComicsController extends Controller
         $comic->series = $data['series'];
         $comic->sale_date = $data['sale_date'];
         $comic->type = $data['type'];
+        $comic->save();
 
     }
 
