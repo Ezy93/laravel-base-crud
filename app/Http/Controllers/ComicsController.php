@@ -53,6 +53,8 @@ class ComicsController extends Controller
         $comic->type = $data['type'];
         $comic->save();
 
+        return redirect()->route('comics.show', $comic);
+
     }
 
     /**
